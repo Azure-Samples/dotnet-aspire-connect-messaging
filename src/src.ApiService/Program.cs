@@ -10,12 +10,7 @@ builder.AddServiceDefaults();
 // Add services to the container.
 builder.Services.AddProblemDetails();
 
-builder.AddAzureServiceBus("messaging",
-    options =>
-    {
-        options.Namespace = "{your-namespace}.servicebus.windows.net";
-        options.Credential = new DefaultAzureCredential();
-    });
+builder.AddAzureServiceBus("messaging");
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

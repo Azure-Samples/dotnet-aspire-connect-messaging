@@ -32,6 +32,8 @@ The fastest way for you to get run this template and provision resources on Azur
 
 > Notes: you can run the project in your local environment or [DevContainer](https://code.visualstudio.com/docs/devcontainers/containers).
 
+1. Open a terminal window at the root of the cloned repository.
+
 1. Run the following commands to initialize the project, provision Azure resources, and deploy the application code.
 
     ```bash
@@ -45,7 +47,7 @@ The fastest way for you to get run this template and provision resources on Azur
     azd up
     ```
 
-2. You will be prompted for the following information:
+1. You will be prompted for the following information:
 
     - `Environment Name`: This will be used as a prefix for all your Azure resources, make sure it is globally unique and under 15 characters.
     - `Azure Subscription`: The Azure Subscription where your resources will be deployed.
@@ -53,7 +55,13 @@ The fastest way for you to get run this template and provision resources on Azur
 
     The command creates a Service Bus in Azure for you to use. Click on the link in the console output to view the resource group in Azure.
 
-3. When the command finishes, relevant configuration values are displayed in the output. Copy the Azure Service Bus namespace value and use it to update the placeholder values the _Program.cs_files of the **.WorkerService** and **.ApiService** projects.
+1. When the provisioning finishes, copy the `Service Bus Namespace` value from the output window.
+
+1. Open the `AspireMessaging.sln` file in the `src` directory using Visual Studio.
+
+1. Paste the `Service Bus Namespace` value into the `your-service-bus` placeholder in the  `appsettings.json` files of the **.WorkerService** and **.ApiService** projects.
+
+1. Press the run button at the top of Visual Studio to launch the app.
 
 ### Clean up resources
 

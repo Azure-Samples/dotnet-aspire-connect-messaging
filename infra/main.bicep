@@ -88,4 +88,4 @@ module storageRoleUser 'core/security/role.bicep' = {
 // To see these outputs, run `azd env get-values`,  or `azd env get-values --output json` for json output.
 output AZURE_LOCATION string = location
 output AZURE_TENANT_ID string = tenant().tenantId
-output SERVICE_BUS_NAME string = serviceBusResources.name
+output AZURE_SERVICE_BUS_NAMESPACE string = serviceBusResources.name

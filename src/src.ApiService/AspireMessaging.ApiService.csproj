@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Aspire.Azure.Messaging.ServiceBus" Version="8.0.0-preview.4.24156.9" />
-    <PackageReference Include="Azure.Identity" Version="1.11.0-beta.1" />
+    <PackageReference Include="Azure.Identity" Version="1.11.0" />
     <PackageReference Include="Azure.Messaging.ServiceBus" Version="7.17.4" />
 	  <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.3" />
 	  <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
